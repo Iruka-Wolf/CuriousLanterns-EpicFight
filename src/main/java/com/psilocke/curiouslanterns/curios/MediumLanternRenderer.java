@@ -41,7 +41,7 @@ public class MediumLanternRenderer implements ICurioRenderer {
 		ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
 		BlockRenderDispatcher blockRenderer = Minecraft.getInstance().getBlockRenderer();
 		LivingEntity living = slotContext.entity();
-		if(living.isCrouching()) {
+		if(living.isCrouching() && CuriousLanternsClientConfig.SNEAK_TRANSLATION.get()) {
 			matrixStack.translate(0.0F, 0.18F, 0.3F);
 		}
 		matrixStack.translate(-.23, 0.78, 0.133);
